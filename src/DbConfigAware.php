@@ -35,7 +35,7 @@ trait DbConfigAware
     /**
      * @param string $hostname the hostname
      */
-    protected function setHostname($hostname)
+    public function setHostname($hostname)
     {
         $this->hostname = $hostname;
     }
@@ -51,7 +51,7 @@ trait DbConfigAware
     /**
      * @param string $database the database
      */
-    protected function setDatabase($database)
+    public function setDatabase($database)
     {
         $this->database = $database;
     }
@@ -67,7 +67,7 @@ trait DbConfigAware
     /**
      * @param string $username the username
      */
-    protected function setUsername($username)
+    public function setUsername($username)
     {
         $this->username = $username;
     }
@@ -83,7 +83,7 @@ trait DbConfigAware
     /**
      * @param string $password the password
      */
-    protected function setPassword($password)
+    public function setPassword($password)
     {
         $this->password = $password;
     }
