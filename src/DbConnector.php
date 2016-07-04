@@ -43,6 +43,7 @@ class DbConnector implements DbConnectorInterface
      */
     public function getConnection()
     {
+        $this->validateConfig();
         $dsn = $this->getDsn();
 
         $db = new \PDO($dsn, $this->username, $this->password, $this->options);
