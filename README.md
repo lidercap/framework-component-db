@@ -22,15 +22,54 @@ Instalação
 }
 ```
 
-NOME DA FUNÇÃO
---------------
+Conexão com o banco de dados
+----------------------------
 
-Descrição da função.
+##### 1) Passando parâmetros de conexão pelo construtor.
 
 ```php
 <?php
 
-// Coloque aqui exemplos de uso
+$connector = new DbConnector([
+    'hostname' => $hostname,
+    'database' => $database,
+    'username' => $username,
+    'password' => $password,
+]);
+
+$conection = $conector->getConnection();
+
+```
+
+##### 2) Passando parâmetros de conexão como array.
+
+```php
+<?php
+
+$connector = new DbConnector();
+$connector->setConfig([
+    'hostname' => $hostname,
+    'database' => $database,
+    'username' => $username,
+    'password' => $password,
+]);
+
+$conection = $conector->getConnection();
+
+```
+
+##### 3) Passando parâmetros individualmente.
+
+```php
+<?php
+
+$connector = new DbConnector();
+$connector->setHostname($hostname);
+$connector->setDatabase($database);
+$connector->setUsername($username);
+$connector->setPassword($password);
+
+$conection = $conector->getConnection();
 
 ```
 
