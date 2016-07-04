@@ -1,22 +1,22 @@
-Nome do Projeto
-===============
+Component Db
+============
 
-Aqui vai uma pequena descrição do projeto, falando um pouco sobre seu propósito e os problemas que ele se propõe a resolver.
+Componente de conexão com o banco de dados da Liderança.
 
 Instalação
 ----------
 
-É recomendado instalar **[nome-do-projeto]** através do [composer](http://getcomposer.org).
+É recomendado instalar **component-db** através do [composer](http://getcomposer.org).
 
 ```
 {
     "require": {
-        "lidercap/framework-[nome-do-projeto]": "dev-master"
+        "lidercap/framework-component-db": "dev-master"
     },
     "repositories": [
         {
             "type": "vcs",
-            "url":  "git@bitbucket.org:lidercap/framework-[nome-do-projeto].git"
+            "url":  "git@bitbucket.org:lidercap/framework-component-db.git"
         }
     ]
 }
