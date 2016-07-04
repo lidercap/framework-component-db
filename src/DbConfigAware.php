@@ -7,22 +7,22 @@ trait DbConfigAware
     /**
      * @var string
      */
-    protected $hostname;
+    protected $hostname = null;
 
     /**
      * @var string
      */
-    protected $database;
+    protected $database = null;
 
     /**
      * @var string
      */
-    protected $username;
+    protected $username = null;
 
     /**
      * @var string
      */
-    protected $password;
+    protected $password = null;
 
     /**
      * @return string
