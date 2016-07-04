@@ -19,6 +19,16 @@ class DbConnector implements DbConnectorInterface
     ];
 
     /**
+     * @param array|null $config
+     */
+    public function __construct(array $config = null)
+    {
+        if (!is_null($config)) {
+            $this->setConfig($config);
+        }
+    }
+
+    /**
      * @return string
      */
     public function getDsn()
