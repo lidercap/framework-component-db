@@ -96,22 +96,22 @@ trait DbConfigAware
     public function setConfig(array $config)
     {
         if (!isset($config['hostname'])) {
-            $message = 'Parâmetro de coenxão não informado: hostname';
+            $message = 'Parâmetro de conexão não informado: hostname';
             throw new \InvalidArgumentException($message, -1);
         }
 
         if (!isset($config['database'])) {
-            $message = 'Parâmetro de coenxão não informado: database';
+            $message = 'Parâmetro de conexão não informado: database';
             throw new \InvalidArgumentException($message, -2);
         }
 
         if (!isset($config['username'])) {
-            $message = 'Parâmetro de coenxão não informado: username';
+            $message = 'Parâmetro de conexão não informado: username';
             throw new \InvalidArgumentException($message, -3);
         }
 
         if (!isset($config['password'])) {
-            $message = 'Parâmetro de coenxão não informado: password';
+            $message = 'Parâmetro de conexão não informado: password';
             throw new \InvalidArgumentException($message, -4);
         }
 

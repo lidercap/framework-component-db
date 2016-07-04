@@ -28,7 +28,7 @@ class DbConfigAwareTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Parâmetro de coenxão não informado: hostname
+     * @expectedExceptionMessage Parâmetro de conexão não informado: hostname
      * @expectedExceptionCode -1
      */
     public function testSetConfigExceptionHostname()
@@ -39,7 +39,7 @@ class DbConfigAwareTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Parâmetro de coenxão não informado: database
+     * @expectedExceptionMessage Parâmetro de conexão não informado: database
      * @expectedExceptionCode -2
      */
     public function testSetConfigExceptionDatabase()
@@ -50,7 +50,7 @@ class DbConfigAwareTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Parâmetro de coenxão não informado: username
+     * @expectedExceptionMessage Parâmetro de conexão não informado: username
      * @expectedExceptionCode -3
      */
     public function testSetConfigExceptionUsername()
@@ -61,7 +61,7 @@ class DbConfigAwareTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Parâmetro de coenxão não informado: password
+     * @expectedExceptionMessage Parâmetro de conexão não informado: password
      * @expectedExceptionCode -4
      */
     public function testSetConfigExceptionPassword()
