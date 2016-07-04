@@ -120,4 +120,30 @@ trait DbConfigAware
         $this->setUsername($config['username']);
         $this->setPassword($config['password']);
     }
+
+    /**
+     * @throws \InvalidArgumentException
+     */
+    public function validateConfig()
+    {
+        if (!isset($this->hostname)) {
+            $message = 'Parâmetro de conexão não informado: hostname';
+            throw new \InvalidArgumentException($message, -1);
+        }
+
+        if (!isset($this->database)) {
+            $message = 'Parâmetro de conexão não informado: database';
+            throw new \InvalidArgumentException($message, -2);
+        }
+
+        if (!isset($this->username)) {
+            $message = 'Parâmetro de conexão não informado: username';
+            throw new \InvalidArgumentException($message, -3);
+        }
+
+        if (!isset($this->password)) {
+            $message = 'Parâmetro de conexão não informado: password';
+            throw new \InvalidArgumentException($message, -4);
+        }
+    }
 }
