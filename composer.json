@@ -1,7 +1,7 @@
 {
-  "name": "lidercap/framework-skeleton",
-  "description": "Esqueleto de componentes PHP",
-  "version": "0.1.6",
+  "name": "lidercap/framework-db",
+  "description": "Componente de conexão com o banco de dados da Liderança",
+  "version": "0.1.0",
   "license": "proprietary",
   "type": "component",
   "config": {
@@ -9,16 +9,17 @@
   },
   "autoload": {
     "psr-4": {
-      "Lidercap\\Skeleton\\": "src/"
+      "Lidercap\\Component\\Db\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Lidercap\\Tests\\Skeleton\\": "tests/"
+      "Lidercap\\Tests\\Component\\Db\\": "tests/"
     }
   },
   "require": {
-    "php": ">=5.5.9"
+    "php": ">=5.5.9",
+    "ext-pdo_dblib": "*"
   },
   "require-dev": {
     "ext-xdebug": "*",
