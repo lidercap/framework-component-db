@@ -2,7 +2,15 @@
 
 namespace Lidercap\Component\Db;
 
-class DbConnector
+class DbConnector implements DbConnectorInterface
 {
+    use DbConfigAware;
 
+    /**
+     * @return \PDO
+     */
+    public function getConnection()
+    {
+
+    }
 }
