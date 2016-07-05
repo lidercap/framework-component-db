@@ -8,7 +8,7 @@ Instalação
 
 É recomendado instalar **component-db** através do [composer](http://getcomposer.org).
 
-```
+```json
 {
     "require": {
         "lidercap/framework-component-db": "dev-master"
