@@ -22,8 +22,8 @@ Instalação
 }
 ```
 
-Conexão com o banco de dados
-----------------------------
+Lista de funções
+----------------
 
 ##### 1) Passando parâmetros de conexão pelo construtor.
 
