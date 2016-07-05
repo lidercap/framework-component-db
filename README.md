@@ -25,7 +25,7 @@ Instalação
 Conectando com o banco de dados
 -------------------------------
 
-##### 1) Passando parâmetros de conexão pelo construtor.
+##### 1) Passando parâmetros de conexão pelo construtor
 
 ```php
 <?php
@@ -41,7 +41,7 @@ $conection = $conector->getConnection();
 
 ```
 
-##### 2) Passando parâmetros de conexão como array.
+##### 2) Passando parâmetros de conexão como array
 
 ```php
 <?php
@@ -58,7 +58,7 @@ $conection = $conector->getConnection();
 
 ```
 
-##### 3) Passando parâmetros individualmente.
+##### 3) Passando parâmetros individualmente
 
 ```php
 <?php
