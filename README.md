@@ -22,15 +22,15 @@ Instalação
 }
 ```
 
-Lista de funções
-----------------
+Conectando com o banco de dados
+-------------------------------
 
 ##### 1) Passando parâmetros de conexão pelo construtor.
 
 ```php
 <?php
 
-$connector = new DbConnector([
+$connector = new \Lidercap\Component\Db\DbConnector([
     'hostname' => $hostname,
     'database' => $database,
     'username' => $username,
@@ -46,7 +46,7 @@ $conection = $conector->getConnection();
 ```php
 <?php
 
-$connector = new DbConnector();
+$connector = new \Lidercap\Component\Db\DbConnector();
 $connector->setConfig([
     'hostname' => $hostname,
     'database' => $database,
@@ -63,7 +63,7 @@ $conection = $conector->getConnection();
 ```php
 <?php
 
-$connector = new DbConnector();
+$connector = new \Lidercap\Component\Db\DbConnector();
 $connector->setHostname($hostname);
 $connector->setDatabase($database);
 $connector->setUsername($username);
