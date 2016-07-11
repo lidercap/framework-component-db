@@ -2,7 +2,7 @@
 
 namespace Lidercap\Component\Db;
 
-trait ConnectionAware
+trait DbConnectionAware
 {
     /**
      * @var \PDO
