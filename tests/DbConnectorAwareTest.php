@@ -24,11 +24,8 @@ class DbConnectorAwareTest extends \PHPUnit_Framework_TestCase
 
         $this->assertNull($property->getValue($this->trait));
 
-        $method = new \ReflectionMethod($this->trait, 'setDbConnector');
-        $method->setAccessible(true);
-
         $dbConnectorMock = $this->prophesize(DbConnector::class);
-        $method->invokeArgs($this->trait, [$dbConnectorMock->reveal()]);
+        $this->trait->setDbConnector($dbConnectorMock->reveal());
 
         $this->assertInstanceOf(DbConnector::class, $property->getValue($this->trait));
     }
@@ -40,11 +37,8 @@ class DbConnectorAwareTest extends \PHPUnit_Framework_TestCase
 
         $this->assertNull($property->getValue($this->trait));
 
-        $method = new \ReflectionMethod($this->trait, 'setDbConnector');
-        $method->setAccessible(true);
-
         $dbConnectorMock = $this->prophesize(DbConnector::class);
-        $method->invokeArgs($this->trait, [$dbConnectorMock->reveal(), false]);
+        $this->trait->setDbConnector($dbConnectorMock->reveal(), false);
 
         $this->assertInstanceOf(DbConnector::class, $property->getValue($this->trait));
     }
@@ -61,11 +55,7 @@ class DbConnectorAwareTest extends \PHPUnit_Framework_TestCase
         $dbConnectorMock = $this->prophesize(DbConnector::class);
         $dbConnectorMock->getConnection()->shouldBeCalled()->willReturn($PDOMock->reveal());
 
-        $method = new \ReflectionMethod($this->trait, 'setDbConnector');
-        $method->setAccessible(true);
-
-        $method->invokeArgs($this->trait, [$dbConnectorMock->reveal(), true]);
-
+        $this->trait->setDbConnector($dbConnectorMock->reveal(), true);
         $this->assertInstanceOf(\PDO::class, $property->getValue($this->trait));
     }
 }

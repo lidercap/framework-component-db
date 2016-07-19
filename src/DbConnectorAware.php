@@ -22,7 +22,7 @@ trait DbConnectorAware
      * @param DbConnector $dbConnector
      * @param bool        $autoConnect
      */
-    protected function setDbConnector(DbConnector $dbConnector, $autoConnect = false)
+    public function setDbConnector(DbConnector $dbConnector, $autoConnect = false)
     {
         $this->dbConnector = $dbConnector;
         if ($autoConnect) {

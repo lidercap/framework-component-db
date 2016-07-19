@@ -1,7 +1,7 @@
 {
   "name": "lidercap/framework-component-db",
   "description": "Componente de conexão com o banco de dados da Liderança",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "license": "proprietary",
   "type": "component",
   "config": {
