@@ -2,20 +2,31 @@
 
 namespace Lidercap\Component\Db;
 
+/**
+ * DbConnectorAware e DbConnectionAware não
+ * devem conviver juntos na mesma classe.
+ */
 trait DbConnectorAware
 {
+    /**
+     * @var \PDO
+     */
+    protected $db;
+
     /**
      * @var DbConnector
      */
     protected $dbConnector;
 
     /**
-     * @codeCoverageIgnore
-     *
      * @param DbConnector $dbConnector
+     * @param bool        $autoConnect
      */
-    protected function setDbConnector(DbConnector $dbConnector)
+    protected function setDbConnector(DbConnector $dbConnector, $autoConnect = false)
     {
         $this->dbConnector = $dbConnector;
+        if ($autoConnect) {
+            $this->db = $dbConnector->getConnection();
+        }
     }
 }
