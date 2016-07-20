@@ -14,15 +14,15 @@ trait DbConnectorAware
     protected $db;
 
     /**
-     * @var DbConnector
+     * @var DbConnectorInterface
      */
     protected $dbConnector;
 
     /**
-     * @param DbConnector $dbConnector
-     * @param bool        $autoConnect
+     * @param DbConnectorInterface $dbConnector
+     * @param bool                 $autoConnect
      */
-    public function setDbConnector(DbConnector $dbConnector, $autoConnect = false)
+    public function setDbConnector(DbConnectorInterface $dbConnector, $autoConnect = false)
     {
         $this->dbConnector = $dbConnector;
         if ($autoConnect) {

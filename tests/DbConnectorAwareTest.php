@@ -2,7 +2,7 @@
 
 namespace Lidercap\Tests\Component\Db;
 
-use Lidercap\Component\Db\DbConnector;
+use Lidercap\Component\Db\DbConnectorInterface;
 use Lidercap\Component\Db\DbConnectorAware;
 
 class DbConnectorAwareTest extends \PHPUnit_Framework_TestCase
@@ -24,10 +24,10 @@ class DbConnectorAwareTest extends \PHPUnit_Framework_TestCase
 
         $this->assertNull($property->getValue($this->trait));
 
-        $dbConnectorMock = $this->prophesize(DbConnector::class);
+        $dbConnectorMock = $this->prophesize(DbConnectorInterface::class);
         $this->trait->setDbConnector($dbConnectorMock->reveal());
 
-        $this->assertInstanceOf(DbConnector::class, $property->getValue($this->trait));
+        $this->assertInstanceOf(DbConnectorInterface::class, $property->getValue($this->trait));
     }
 
     public function testSetDbConnectorAutoConnectFalse()
@@ -37,10 +37,10 @@ class DbConnectorAwareTest extends \PHPUnit_Framework_TestCase
 
         $this->assertNull($property->getValue($this->trait));
 
-        $dbConnectorMock = $this->prophesize(DbConnector::class);
+        $dbConnectorMock = $this->prophesize(DbConnectorInterface::class);
         $this->trait->setDbConnector($dbConnectorMock->reveal(), false);
 
-        $this->assertInstanceOf(DbConnector::class, $property->getValue($this->trait));
+        $this->assertInstanceOf(DbConnectorInterface::class, $property->getValue($this->trait));
     }
 
     public function testSetDbConnectorAutoConnectTrue()
@@ -52,7 +52,7 @@ class DbConnectorAwareTest extends \PHPUnit_Framework_TestCase
 
         $PDOMock = $this->prophesize(\PDO::class);
 
-        $dbConnectorMock = $this->prophesize(DbConnector::class);
+        $dbConnectorMock = $this->prophesize(DbConnectorInterface::class);
         $dbConnectorMock->getConnection()->shouldBeCalled()->willReturn($PDOMock->reveal());
 
         $this->trait->setDbConnector($dbConnectorMock->reveal(), true);
