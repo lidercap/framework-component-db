@@ -16,7 +16,7 @@ Instalação
     "repositories": [
         {
             "type": "vcs",
-            "url":  "git@bitbucket.org:lidercap/framework-component-db.git"
+            "url":  "git@github.com:lidercap/framework-component-db.git"
         }
     ]
 }
